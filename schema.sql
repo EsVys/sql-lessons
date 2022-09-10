@@ -5,13 +5,13 @@ CREATE TABLE IF NOT EXISTS `Patient` (
   `Birthdate` DATETIME NOT NULL
   );
   
- CREATE TABLE IF NOT EXIST `Doctor` (
+ CREATE TABLE IF NOT EXISTS `Doctor` (
    `DoctorId` int primary key auto_increment NOT NULL,
    `Name` varchar(255) NOT NULL,
    `Field` varchar(255) NOT NULL,
    );
    
- CREATE TABLE IF NOT EXIST `Appointment` (
+ CREATE TABLE IF NOT EXISTS `Appointment` (
    `Date` DATETIME NOT NULL,
    `DoctorId` int NOT NULL,
    `PatientId` int NOT NULL,
