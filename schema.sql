@@ -32,9 +32,13 @@ CREATE TABLE IF NOT EXISTS `Patient` (
     ('2022-03-06 09:12:00', '2', '2'),
     ('2023-09-08 06:55:00', '3', '1');
  	
-select * from `Patient` where `Address` = 'Opal Avenue 103';
+SELECT * FROM `Patient` WHERE `Address` = 'Opal Avenue 103';
 
-select `Date` as `Appointment Date`, `Name` from Appointment a
+SELECT `Date` AS `Appointment Date`, `Name` FROM Appointment a
 JOIN Doctor d
 ON a.DoctorId = d.DoctorId
 WHERE d.Field = 'Orthoped'
+
+SELECT * FROM `Appointment` WHERE `Date` > now();
+
+SELECT COUNT(`Date`) FROM `Appointment` WHERE `DoctorId` = 1;
