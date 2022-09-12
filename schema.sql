@@ -42,3 +42,10 @@ WHERE d.Field = 'Orthoped'
 SELECT * FROM `Appointment` WHERE `Date` > now();
 
 SELECT COUNT(`Date`) FROM `Appointment` WHERE `DoctorId` = 1;
+
+SELECT * FROM `Appointment` 
+JOIN Patient ON Appointment.PatientId = Patient.PatientId 
+JOIN Doctor ON Appointment.DoctorId = Doctor.DoctorId
+WHERE Patient.Name = 'Karen Lane'
+AND Doctor.Field = 'Orthoped'
+AND Appointment.Date > now();
